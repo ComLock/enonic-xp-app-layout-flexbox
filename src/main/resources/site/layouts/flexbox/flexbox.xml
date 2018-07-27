@@ -2,5 +2,166 @@
 <layout>
 	<display-name>Flexbox layout</display-name>
 	<config>
+
+		<input name="containerTag" type="TextLine">
+			<label>Container tag</label>
+			<occurrences minimum="0" maximum="1"/>
+			<default>div</default>
+		</input>
+
+        <input name="alignContent" type="ComboBox">
+            <label>Align content</label>
+            <occurrences minimum="1" maximum="1"/>
+            <config>
+                <option value="flex-start">flex-start</option>
+                <option value="flex-end">flex-end</option>
+                <option value="center">center</option>
+                <option value="space-between">space-between</option>
+                <option value="space-around">space-around</option>
+                <option value="stretch">stretch (default)</option>
+            </config>
+            <default></default>
+        </input>
+
+        <input name="alignItems" type="ComboBox">
+            <label>Align items</label>
+            <occurrences minimum="1" maximum="1"/>
+            <config>
+                <option value="flex-start">flex-start</option>
+                <option value="flex-end">flex-end</option>
+                <option value="center">center</option>
+                <option value="baseline">baseline</option>
+                <option value="stretch">stretch (default)</option>
+            </config>
+            <default></default>
+        </input>
+
+        <input name="flexDirection" type="ComboBox">
+            <label>Flex direction</label>
+            <occurrences minimum="1" maximum="1"/>
+            <config>
+                <option value="row">row (default)</option>
+                <option value="row-reverse">row-reverse</option>
+                <option value="column">column</option>
+                <option value="column-reverse">column-reverse</option>
+            </config>
+            <default></default>
+        </input>
+
+        <input name="flexWrap" type="ComboBox">
+            <label>Flex wrap</label>
+            <occurrences minimum="1" maximum="1"/>
+            <config>
+                <option value="nowrap">nowrap (default)</option>
+                <option value="wrap">wrap</option>
+                <option value="wrap-reverse">wrap-reverse</option>
+            </config>
+            <default></default>
+        </input>
+
+        <input name="justifyContent" type="ComboBox">
+            <label>Justify content</label>
+            <occurrences minimum="1" maximum="1"/>
+            <config>
+                <option value="flex-start">flex-start (default)</option>
+                <option value="flex-end">flex-end</option>
+                <option value="center">center</option>
+                <option value="space-between">space-between</option>
+                <option value="space-around">space-around</option>
+                <option value="space-evenly">space-evenly</option>
+            </config>
+            <default></default>
+        </input>
+
+		<item-set name="regions">
+			<label>Region</label>
+			<occurrences minimum="1" maximum="12"/><!-- maximum should be same as number of regions -->
+			<items>
+				<input name="itemTag" type="TextLine">
+					<label>Item tag</label>
+					<occurrences minimum="0" maximum="1"/>
+					<default>div</default>
+				</input>
+                <input name="alignSelf" type="ComboBox">
+                    <label>Align self</label>
+                    <occurrences minimum="1" maximum="1"/>
+                    <config>
+                        <option value="auto">auto (default)</option>
+                        <option value="flex-start">flex-start</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="center">center</option>
+                        <option value="baseline">baseline</option>
+                        <option value="stretch">stretch</option>
+                    </config>
+                    <default></default>
+                </input>
+                <input name="flexBasis" type="TextLine">
+					<label>Flex basis</label>
+					<occurrences minimum="0" maximum="1"/>
+					<default></default>
+				</input>
+                <input name="flexGrow" type="Long">
+					<label>Flex grow</label>
+					<occurrences minimum="0" maximum="1"/>
+					<default></default>
+				</input>
+                <input name="flexShrink" type="Long">
+					<label>Flex shrink</label>
+					<occurrences minimum="0" maximum="1"/>
+					<default></default>
+				</input>
+                <input name="order" type="TextLine">
+					<label>Order</label>
+					<occurrences minimum="0" maximum="1"/>
+					<default></default>
+				</input>
+
+				<item-set name="mediaQueries">
+					<label>Media query</label>
+					<occurrences minimum="0" maximum="0"/>
+					<items>
+						<input name="mediaQueryMinWidth" type="TextLine">
+							<label>Media query minimum width</label>
+							<occurrences minimum="0" maximum="1"/>
+						</input>
+                        <input name="flexBasis" type="TextLine">
+        					<label>Flex basis</label>
+        					<occurrences minimum="0" maximum="1"/>
+        					<default></default>
+        				</input>
+                        <input name="flexGrow" type="Long">
+        					<label>Flex grow</label>
+        					<occurrences minimum="0" maximum="1"/>
+        					<default></default>
+        				</input>
+                        <input name="flexShrink" type="Long">
+        					<label>Flex shrink</label>
+        					<occurrences minimum="0" maximum="1"/>
+        					<default></default>
+        				</input>
+                        <input name="order" type="TextLine">
+        					<label>Order</label>
+        					<occurrences minimum="0" maximum="1"/>
+        					<default></default>
+        				</input>
+					</items>
+				</item-set>
+			</items>
+		</item-set>
 	</config>
+	<regions>
+		<region name="flexbox1"/>
+		<region name="flexbox2"/>
+		<region name="flexbox3"/>
+		<region name="flexbox4"/>
+		<region name="flexbox5"/>
+		<region name="flexbox6"/>
+		<region name="flexbox7"/>
+		<region name="flexbox8"/>
+		<region name="flexbox9"/>
+		<region name="flexbox10"/>
+		<region name="flexbox11"/>
+		<region name="flexbox12"/>
+		<!-- Just add more if needed -->
+	</regions>
 </layout>
